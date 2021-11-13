@@ -1,0 +1,22 @@
+{
+  "name": "imooc-blog",
+  "version": "1.0.0",
+  "description": "1. 该项目应运行在 `HBuilder X` 之中\r 2. 运行该项目前，请先执行 `npm install` 下来依赖包",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://gitee.com/mudong.com/imooc-blog-code.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "dayjs": "^1.10.4"
+  },
+  "directories": {
+    "doc": "docs"
+  },
+  "keywords": []
+}
