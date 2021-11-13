@@ -1,0 +1,6 @@
+<!--index.wxml-->
+<view>首页</view>
+
+<button type="primary" bindtap="onGetClick">发起 get 请求</button>
+<button type="primary" bindtap="onPostClick">发起 post 请求</button>
+<button type="primary" bindtap="onAsyncClick">发起请求，通过async + await简化操作</button>

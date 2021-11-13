@@ -1,0 +1,41 @@
+<!--index.wxml-->
+<view>
+    <view>
+      商品的单价：{{product.price}}
+    </view>
+    <view>
+      商品的价格：{{product.num}}
+    </view>
+    <view>
+      商品的总价：{{product.price * product.num}}
+    </view>
+    <button type="primary" bindtap="onAddNum">num + 1</button>
+    <button type="primary" bindtap="onAddNumN" data-step = "5">num + N</button>
+    <view>
+      商品的数量：
+      <input type="number" class="number-input" value="{{product.num}}" bindinput="onInput"/>
+    </view>
+    <view>
+      售货员小姐姐对你发出一声惊呼：
+      <text wx:if="{{product.price * product.num <= 100}}">hello 帅哥</text>
+      <text wx:elif="{{product.price * product.num > 100 && product.price * product.num < 1000}}">哇哦 有钱人哦</text>
+      <text wx:else>土豪 你好</text>
+    </view>
+    
+    <view>
+      售货员小姐姐对你发出一声惊呼：
+      <text hidden = "{{!(product.price * product.num <= 100)}}">hello 帅哥</text>
+      <text hidden="{{!(product.price * product.num > 100 && product.price * product.num < 1000)}}">哇哦 有钱人哦</text>
+      <text hidden="{{(product.price * product.num < 1000)}}">土豪 你好</text>
+    </view>
+
+    <view class="products-box">
+      <block wx:for="{{products}}" wx:key="index">
+        <view class="products-item">
+          <text>索引: {{index + 1}}--</text>
+          <text>商品名：{{item.name}}--</text>
+          <text>价格：{{item.price}}</text>
+        </view>
+      </block>
+    </view>
+</view>

@@ -1,0 +1,17 @@
+/* components/tabs/tabs.wxss */
+.tabs-box {
+    width: 750rpx;
+    white-space: nowrap;
+    border-bottom: 1px solid #cccccc;
+    position: sticky;
+    top: 0;
+    z-index: 9;
+    background-color: white;
+}
+.tab {
+    display: inline-block;
+    padding: 12px 22px;
+}
+.active {
+    color: #f94b2a;
+}

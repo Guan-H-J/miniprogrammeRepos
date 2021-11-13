@@ -1,0 +1,12 @@
+<!--pages/list/list.wxml-->
+<navigator open-type="switchTab" url="/pages/index/index">声明式导航：跳转到tabbar页面</navigator>
+<button type="primary" bindtap="onSwitchToHome">编程式导航：跳转到tabbar页面</button>
+<scroll-view scroll-y class="list-box">
+    <block wx:for="{{ listData }}" wx:key="index">
+        <view class="list-item">
+            <navigator url="/pages/detail/detail?index={{index}}&title={{item.title}}">{{ index }}--{{ item.title }}</navigator>
+            <button type="primary" bindtap="onNavigateToDetail" data-indexOfListData="{{index}}" data-titleOfListData="{{item.title}}">编程式导航：跳转到非tabbar页面</button>
+        </view>
+    </block>
+    <view wx:if="{{listData.length === total}}" class="bottom">我也是有底线的！</view>
+</scroll-view>

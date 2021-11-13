@@ -1,0 +1,9 @@
+/**index.wxss**/
+.number-input{
+  margin: 4px 18px;
+  padding: 4px 16px;
+  border: 1px solid #cccccc;
+}
+button{
+  margin: 5px;
+}
